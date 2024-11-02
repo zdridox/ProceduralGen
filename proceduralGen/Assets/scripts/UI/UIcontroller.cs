@@ -57,7 +57,7 @@ public class UIcontroller : MonoBehaviour
     // go to world button
     public static void Button2()
     {
-        if(playerManager.selectedWorld.gameObject.GetComponent<World>().isCaptured && playerManager.currentWorld.gameObject.GetComponent<World>().connectedWorlds.Contains(playerManager.selectedWorld))
+        if(playerManager.selectedWorld.gameObject.GetComponent<World>().isCaptured)
         {
             playerManager.currentWorld = playerManager.selectedWorld;
         }
