@@ -65,7 +65,7 @@ public class Segment : MonoBehaviour
 
     void Update()
     {
-        // get total connections
+        // get total connections // useless
         int childCount = transform.childCount;
         switch (childCount)
         {
