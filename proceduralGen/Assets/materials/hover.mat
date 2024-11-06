@@ -46,7 +46,7 @@ Material:
     - _QueueOffset: 0
     - _alpha: 0.4
     - _on_off: 1
-    - _size: 1.2
+    - _size: 1.1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _dir: {r: 0.2, g: 0.2, b: 0, a: 0}

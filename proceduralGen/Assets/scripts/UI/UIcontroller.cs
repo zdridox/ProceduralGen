@@ -37,10 +37,9 @@ public class UIcontroller : MonoBehaviour
         // set mainUI variables
         if(playerManager.selectedWorld != null)
         {
-            name.text = "name: " + playerManager.selectedWorld.name;
+            name.text = "name: " + playerManager.selectedWorld.GetComponent<World>().name;
             takenOver.text = "isTakenOver: " + playerManager.selectedWorld.gameObject.GetComponent<World>().isCaptured.ToString();
             numOfConn.text = "number of connections: " + playerManager.selectedWorld.gameObject.GetComponent<World>().connectionsCount.ToString();
-            numOfEnem.text = "number of enemies: " + playerManager.selectedWorld.gameObject.GetComponent<World>().enemyCount.ToString();
         }
     }
 

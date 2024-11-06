@@ -21,19 +21,36 @@ public class Segment : MonoBehaviour
             if(isStart)
             {
                 playerManager.currentWorld = go;
-                go.gameObject.GetComponent<World>().isCaptured = true;
+                playerManager.selectedWorld = go;
+                go.GetComponent<World>().isCaptured = true;
+                go.GetComponent<World>().name = "start";
+            }
+
+            if(isEnd)
+            {
+                go.GetComponent<World>().name = "end";
             }
         }
         else
         {
-            int rng = Random.Range(2, 4);
-            for (int i = 0; i < rng; i++)
+            // better rng
+            int rng = Random.Range(1, 1000);
+            int index = 0;
+            if(rng <= 500)
+            {
+                index = 2;
+            } else
+            {
+                index = 3;
+            }
+            for (int i = 0; i < index; i++)
             {
                 // set worlds variables
                 GameObject go = Instantiate(worldPrefab, this.transform);
                 go.name = i.ToString();
+                go.GetComponent<World>().name = Random.Range(1, 1000).ToString();
                 go.transform.rotation = Quaternion.Euler(new Vector3(Random.Range(0, 46), Random.Range(0, 46), Random.Range(0, 46)));
-                if(rng == 3)
+                if(index == 3)
                 {
                     switch (i)
                     {
@@ -47,7 +64,7 @@ public class Segment : MonoBehaviour
                             go.transform.localPosition = new Vector3(-5, 0, 0);
                             break;
                     }
-                } else if (rng == 2)
+                } else if (index == 2)
                 {
                     switch (i)
                     {

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
-    public int connectionsCount, enemyCount;
+    public int connectionsCount;
+    public string name;
     [SerializeField] GameObject lrPrefab;
     GameObject previousSegment;
     public List<GameObject> connectedWorlds = new List<GameObject>();
@@ -13,7 +14,6 @@ public class World : MonoBehaviour
 
     void Start()
     {
-        enemyCount = Random.Range(0, 20);
         // get previous segment
         if(!transform.parent.GetComponent<Segment>().isStart) previousSegment = Generation.segments[transform.parent.GetComponent<Segment>().segmentIndex - 1];
 
