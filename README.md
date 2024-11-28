@@ -3,7 +3,7 @@
 you can only access levels that you have taken over. To take over a level you need to attack it and in order to do that you need to be on a level thats connected to the level you want to attack. </br>
 Attack - just takes over a level if player is on a connected level </br>
 Go - Changes currentLevel to selected one if its taken over </br>
-Gold level = CurrentLevel </br>
+Gold level = currentLevel </br>
 Blue level = Level is taken over and can be set as currentLevel </br>
 White level = selectedLevel </br>
 
